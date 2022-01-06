@@ -8,5 +8,5 @@ export function assetUrl(url: string): string {
   const publicPathSuffix = publicPath.endsWith('/') ? '' : '/';
   const urlPrefix = url.startsWith('/') ? '' : '/';
 
-  return `${publicPath}${publicPathSuffix}assets${urlPrefix}${url}`;
+  return `${url.startsWith('/') ? '' : `${publicPath}${publicPathSuffix}assets`}${urlPrefix}${url}`;
 }
