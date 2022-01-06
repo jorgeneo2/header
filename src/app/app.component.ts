@@ -19,6 +19,6 @@ export class AppComponent {
     
     console.log('HEADER messagesAppService.messageData copies',this.messagesAppService.messageData);    
      
-    console.log('HEADER singleSpaPropsService SsoProps',this.singleSpaPropsService.singleSpaProps['SsoProps']);    
+    console.log('HEADER singleSpaPropsService MiProps',this.singleSpaPropsService.singleSpaProps['MiProps']);    
   }
 }

@@ -8,7 +8,6 @@ import { MessagesAppService } from '@services/messages-app/messages-app.service'
 import { ParametersService } from '@services/parameters/parameters.service';
 import { SingleSpaPropsService } from '@services/single-spa-props/single-spa-props.service';
 import { AppComponent } from './app.component';
-import { ItauPjInterceptor } from './core/interceptors/itau-pj.interceptor';
 
 export function loadResources(
   messagesAppService: MessagesAppService,
@@ -46,10 +45,6 @@ export function loadResources(
         BusinessRulesService,
         SingleSpaPropsService,
       ],
-    }, {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ItauPjInterceptor,
-      multi: true,
     },
   ],
   bootstrap: [AppComponent]
