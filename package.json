@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng s --project header --disable-host-check --port 4201 --deploy-url http://localhost:4201/ --live-reload false",
-    "build": "ng build",
+    "start:local": "ng serve --deploy-url http://localhost:4201/ --port 4201 --live-reload false",
+    "start:nginx": "ng serve --deploy-url /header/ --port 4201 --live-reload false",  
+    "build": "ng build --deploy-url /header/ --output-hashing none --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
